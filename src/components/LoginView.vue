@@ -21,6 +21,7 @@ export default {
         store.actions.newUser({
           name: text,
           id: Math.random().toString(36).substring(7),
+          points: 0,
         });
         this.$router.go('/games');
       }

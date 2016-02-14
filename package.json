@@ -5,7 +5,8 @@
   "private": true,
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "devstart": "webpack && node app.js"
   },
   "dependencies": {
     "co": "^4.6.0",
@@ -23,7 +24,8 @@
   },
   "babel": {
     "presets": [
-      "es2015"
+      "es2015",
+      "stage-2"
     ]
   },
   "eslintConfig": {
@@ -43,6 +45,7 @@
       "no-console": 0,
       "dot-notation": 0,
       "padded-blocks": 0,
+      "no-param-reassign": 0,
       "no-multiple-empty-lines": 0,
       "func-names": 0
     },

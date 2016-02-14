@@ -5,11 +5,13 @@ import mutations from './mutations';
 
 Vue.use(Vuex);
 
-const socket = io('http://localhost:5000');
 const state = {
   user: '',
+  currentQuestion: {},
   users: [],
   games: [],
+  questions: [],
+  answers: [],
 };
 
 export default new Vuex.Store({

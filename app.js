@@ -11,7 +11,8 @@ const io = require('socket.io').listen(app.listen(5000));
 
 const index = require('./routes/index');
 
-const games = [];
+const cards = (require('./public/cards.json'));
+const games = ['disgame'];
 const users = [];
 
 // global middlewares
@@ -46,7 +47,16 @@ app.on('error', (err, ctx) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
-  // socket.on('event', (data) => {
-    // console.log(data);
-  // });
+  io.emit('games', games);
+  socket.on('new user', (user) => {
+    users.push(user);
+    console.log(users);
+    socket.broadcast.emit('user added', user);
+  });
+  socket.on('request cards', () => {
+    io.emit('give cards', cards);
+  });
+  socket.on('request questions', (questions) => {
+    io
+  })
 });

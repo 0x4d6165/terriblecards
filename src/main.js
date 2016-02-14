@@ -5,6 +5,7 @@ import Router from 'vue-router';
 import App from './components/App.vue';
 import LoginView from './components/LoginView.vue';
 import GamesListView from './components/GamesListView.vue';
+import GameView from './components/GameView.vue';
 
 Vue.use(Router);
 
@@ -17,6 +18,11 @@ router.map({
   },
   '/games': {
     component: GamesListView,
+    subRoutes: {
+      '/demo': {
+        component: GameView,
+      },
+    },
   },
 });
 

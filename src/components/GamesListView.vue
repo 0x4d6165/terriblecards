@@ -10,22 +10,22 @@ nav.navbar.navbar-default.fixed-top
       a.navbar-brand(v-link="'games'") {{ user.name }} @ {{ user.id }}
       ul.nav.navbar-nav
         li
-          a(v-link="{path: '/newgame'}") Create New Game
+          a(v-link="{path: '/games/demo'}") Create New Game
+.container-fluid
 router-view.view(keep-alive='', transition='', transition-mode='out-in')
 </template>
 
 <script>
 import store from '../store';
+
+// const socket = io('http://localhost:5000');
 export default {
   computed: {
     user() {
       return store.state.user;
     },
   },
-  // ready() {
-    // socket.on('connect', () => {
-      // socket.emit('event', { my: 'data' });
-    // });
-  // },
+  ready() {
+  },
 };
 </script>

@@ -1,0 +1,48 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin/node',
+1 verbose cli   '/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin/npm',
+1 verbose cli   'run',
+1 verbose cli   'devstart' ]
+2 info using npm@3.7.2
+3 info using node@v5.3.0
+4 verbose run-script [ 'predevstart', 'devstart', 'postdevstart' ]
+5 info lifecycle terriblecards@0.0.0~predevstart: terriblecards@0.0.0
+6 silly lifecycle terriblecards@0.0.0~predevstart: no script for predevstart, continuing
+7 info lifecycle terriblecards@0.0.0~devstart: terriblecards@0.0.0
+8 verbose lifecycle terriblecards@0.0.0~devstart: unsafe-perm in lifecycle true
+9 verbose lifecycle terriblecards@0.0.0~devstart: PATH: /Users/gigavinyl/.nvm/versions/node/v5.3.0/lib/node_modules/npm/bin/node-gyp-bin:/Users/gigavinyl/Projects/terriblecards/node_modules/.bin:/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin:/Users/gigavinyl/Applications/mongodb/bin:/Users/gigavinyl/.depot_tools:/usr/local/var/rbenv/shims:/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin:/usr/local/bin:/Users/gigavinyl/.rbenv/shims:/Users/gigavinyl/.rbenv/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+10 verbose lifecycle terriblecards@0.0.0~devstart: CWD: /Users/gigavinyl/Projects/terriblecards
+11 silly lifecycle terriblecards@0.0.0~devstart: Args: [ '-c', 'webpack && node app.js' ]
+12 silly lifecycle terriblecards@0.0.0~devstart: Returned: code: 1  signal: null
+13 info lifecycle terriblecards@0.0.0~devstart: Failed to exec devstart script
+14 verbose stack Error: terriblecards@0.0.0 devstart: `webpack && node app.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/Users/gigavinyl/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/utils/lifecycle.js:239:16)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at EventEmitter.emit (events.js:172:7)
+14 verbose stack     at ChildProcess.<anonymous> (/Users/gigavinyl/.nvm/versions/node/v5.3.0/lib/node_modules/npm/lib/utils/spawn.js:24:14)
+14 verbose stack     at emitTwo (events.js:87:13)
+14 verbose stack     at ChildProcess.emit (events.js:172:7)
+14 verbose stack     at maybeClose (internal/child_process.js:818:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:211:5)
+15 verbose pkgid terriblecards@0.0.0
+16 verbose cwd /Users/gigavinyl/Projects/terriblecards
+17 error Darwin 15.0.0
+18 error argv "/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin/node" "/Users/gigavinyl/.nvm/versions/node/v5.3.0/bin/npm" "run" "devstart"
+19 error node v5.3.0
+20 error npm  v3.7.2
+21 error code ELIFECYCLE
+22 error terriblecards@0.0.0 devstart: `webpack && node app.js`
+22 error Exit status 1
+23 error Failed at the terriblecards@0.0.0 devstart script 'webpack && node app.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the terriblecards package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     webpack && node app.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs terriblecards
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls terriblecards
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]
