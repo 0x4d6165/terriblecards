@@ -23,8 +23,7 @@
   },
   "babel": {
     "presets": [
-      "es2015",
-      "stage-2"
+      "es2015"
     ]
   },
   "eslintConfig": {
@@ -52,6 +51,9 @@
       "node": true,
       "browser": true
     },
+    "globals": {
+      "socket": true
+    },
     "ecmaFeatures": {
       "modules": true,
       "generators": true
@@ -74,6 +76,7 @@
     "expose-loader": "^0.7.1",
     "file-loader": "^0.8.5",
     "jade": "^1.11.0",
+    "jquery": "^2.2.0",
     "less": "^2.6.0",
     "less-loader": "^2.2.2",
     "template-html-loader": "0.0.3",

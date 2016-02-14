@@ -7,9 +7,12 @@ const router = require('koa-router')();
 const logger = require('koa-logger');
 const serve = require('koa-static');
 const views = require('koa-views');
-const io = require('socket.io').listen(app.listen(port));
+const io = require('socket.io').listen(app.listen(5000));
 
 const index = require('./routes/index');
+
+const games = [];
+const users = [];
 
 // global middlewares
 app.use(views('views', {
@@ -43,4 +46,7 @@ app.on('error', (err, ctx) => {
 
 io.on('connection', (socket) => {
   console.log('a user connected');
+  // socket.on('event', (data) => {
+    // console.log(data);
+  // });
 });
