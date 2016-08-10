@@ -1,7 +1,9 @@
-import express from 'express';
+import Koa from 'koa';
+import koarouter from 'koa-router';
+import kstatic from 'koa-static';
 import pug from 'pug';
 import { babel } from 'dynamic-require';
-import morgan from 'morgan';
+import morgan from 'koa-morgan';
 
 global.CLIENT = false;
 
@@ -11,12 +13,13 @@ global.CLIENT = false;
 const here = process.cwd();
 const log = ::console.log;
 const port = process.env.PORT || 3000;
-const app = express()
-	.use(morgan(process.env.NODE_ENV === 'production'
+const app = new Koa()
+
+app.use(morgan(process.env.NODE_ENV === 'production'
 		? '[:date[web]] :remote-addr :method/:http-version :url -- :status :response-time ms'
 		: 'dev'
 	));
-const router = express.Router();
+const router = koarouter();
 
 let hashes = {};
 let devopt = {};
@@ -33,8 +36,8 @@ else {
 	// use dev compilation and hot reloading
 	const config = require('./wp.dev.babel').default,
 		compiler = require('webpack')(config),
-		dev = require('webpack-dev-middleware'),
-		hot = require('webpack-hot-middleware');
+		dev = require('koa-webpack-middleware').devMiddleware,
+		hot = require('koa-webpack-middleware').hotMiddleware;
 
 	app.use(dev(compiler, {
 		noInfo: true,
@@ -73,7 +76,7 @@ routes.forEach(endpoint);
 
 app
 	.use(router)
-	.use(express.static('./public'));
+	.use(kstatic('./public'));
 
 app.listen(port, '::1', err => {
 	if (err) {
