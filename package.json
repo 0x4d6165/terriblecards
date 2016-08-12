@@ -30,9 +30,9 @@
     "webpack-node-externals": "^1.2.0"
   },
   "dependencies": {
-    "@cycle/core": "^6.0.3",
-    "@cycle/dom": "^9.4.0",
+    "@cycle/dom": "^12.0.3",
     "@cycle/isolate": "^1.2.1",
+    "@cycle/rx-run": "^7.0.1",
     "compression": "^1.6.2",
     "cross-env": "^1.0.7",
     "cycle-restart": "0.0.14",
@@ -40,7 +40,7 @@
     "express": "^4.13.4",
     "morgan": "^1.7.0",
     "pug": "^2.0.0-alpha7",
-    "rx": "^4.1.0",
+    "rxjs-es": "^5.0.0-beta.11",
     "virtual-dom": "^2.1.1"
   },
   "xo": {
